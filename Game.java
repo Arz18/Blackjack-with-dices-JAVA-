@@ -7,6 +7,11 @@ public class Game {
     private Dice dice; // Objeto que simula el dado.
     private Scanner scanner; // Objeto para leer la entrada del usuario.
 
+      private void printHeader() {
+        System.out.println("==================================================");
+        System.out.println("            ¡Bienvenido a Blackjack con Dados!    ");
+        System.out.println("==================================================");
+    }
     // Constructor que inicializa los objetos del juego.
     public Game() {
         player = new Player(100); // El jugador comienza con $100.
@@ -17,7 +22,7 @@ public class Game {
 
     // Método que inicia el juego y gestiona las rondas.
     public void start() {
-        System.out.println("¡Bienvenido a Blackjack con Dados!");
+        printHeader();
         while (player.getBalance() > 0) { // Mientras el jugador tenga saldo.
             System.out.println("\nSaldo actual: $" + player.getBalance());
             System.out.print("Ingresa tu apuesta: ");
