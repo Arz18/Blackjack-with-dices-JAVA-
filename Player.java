@@ -3,13 +3,12 @@ public class Player {
     private int balance; // Saldo actual del jugador.
     private int currentBet; // Apuesta actual.
     private int total; // Puntuación total del jugador en la ronda.
-    private int acesCount;
+    
 
     // Constructor que inicializa el saldo inicial y la puntuación.
     public Player(int initialBalance) {
         this.balance = initialBalance;
         this.total = 0;
-        this.acesCount = 0;
     }
 
     // Método que permite al jugador realizar una apuesta si es válida.
@@ -33,19 +32,7 @@ public class Player {
     // Método para sumar un valor a la puntuación total del jugador.
     public void addToTotal(int value) {
         this.total += value;
-       
-    if (value == 11) {
-        acesCount++;
-    }
-
-    // Adjust for Aces if the total exceeds 21
-    adjustForAces();
-} 
-// Adjusts the total for Aces if the total exceeds 21 (counts some Aces as 1 instead of 11)
-private void adjustForAces() {
-    while (total > 21 && acesCount > 0) {
-        total -= 10;  // Counts an Ace as 1 instead of 11
-        acesCount--;   // Decreases the Ace count
+    
     }
 }
 
