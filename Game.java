@@ -28,7 +28,7 @@ public class Game {
             System.out.print("Ingresa tu apuesta: ");
             int bet = scanner.nextInt();
 
-            if (!player.placeBet(bet)) { // Valida la apuesta.
+            if (!player.placeBet(bet)) { // invalida la apuesta.
                 System.out.println("Apuesta inválida. Inténtalo de nuevo.");
                 continue;
             }
