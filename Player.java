@@ -54,7 +54,7 @@ public class Player {
     // Método para reiniciar la puntuación del jugador al comienzo de una nueva ronda.
     public void resetTotal() {
         this.total = 0;
-        this.acesCount = 0;
+        
 
     }
     public void showStatus() {
