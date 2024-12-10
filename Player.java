@@ -34,7 +34,7 @@ public class Player {
         this.total += value;
     
     }
-}
+
 
     // Método que verifica si el jugador se pasó de 21.
     public boolean isBust() {
